@@ -1,0 +1,61 @@
+{
+  "name": "🧋𝗞𝗛𝗔𝗢𝗦🧋",
+  "description": "Best WhatsApp bot made by 𝕶𝖍𝖆𝖔𝖘",
+  "logo": "https://i.imgur.com/Axre4u3.jpeg",
+  "keywords": ["whatsapp", "bot", "popkid", "multi-tool"],
+  "repository": "https://github.com/Bryanlover1/your-repo",
+  "stack": "heroku-24",
+  "env": {
+    "SESSION_ID": {
+      "description": "Paste here the session ID that you have scanned",
+      "required": true
+    },
+    "MODE": {
+      "description": "Choose 'public' or 'private' for bot mode",
+      "required": true,
+      "value": "public"
+    },
+    "AUTO_STATUS_SEEN": {
+      "description": "Enter 'true' to auto view WhatsApp status",
+      "required": false
+    },
+    "AUTO_READ": {
+      "description": "Enter 'true' to auto-read messages",
+      "required": false
+    },
+    "AUTO_TYPING": {
+      "description": "Enter 'true' to show typing while responding",
+      "required": false
+    },
+    "AUTO_RECORDING": {
+      "description": "Enter 'true' to show recording indicator",
+      "required": false
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Enter 'true' to show bot as always online",
+      "required": false
+    },
+    "AUTO_BLOCK": {
+      "description": "Enter 'true' to block numbers starting with +233",
+      "required": false
+    },
+    "REJECT_CALL": {
+      "description": "Enter 'true' to automatically reject incoming calls",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
